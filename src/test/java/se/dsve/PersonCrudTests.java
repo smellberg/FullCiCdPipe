@@ -19,25 +19,30 @@ public class PersonCrudTests {
     @Test
     public void testAddPerson() {
         // TODO: Implement testAddPerson logic
+        fail("Test not yet implemented");
     }
 
     @Test
     public void testGetPersonByName() {
         // TODO: Implement testGetPersonByName logic
+        fail("Test not yet implemented");
     }
 
     @Test
     public void testGetAllPersons() {
         // TODO: Implement testGetAllPersons logic
+        fail("Test not yet implemented");
     }
 
     @Test
     public void testUpdatePerson() {
         // TODO: Implement testUpdatePerson logic
+        fail("Test not yet implemented");
     }
 
     @Test
     public void testDeletePerson() {
         // TODO: Implement testDeletePerson logic
+        fail("Test not yet implemented");
     }
 }
