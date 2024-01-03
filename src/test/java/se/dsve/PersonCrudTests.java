@@ -105,7 +105,7 @@ public class PersonCrudTests {
         // Kolla att resultatet inte är null
         //assertNotNull(result, "Uppdaterad person är null");
 
-        // Kolla att åldern har uppdaterats korrekt.
+        // Kolla att åldern har uppdaterats korrekt
         //assertEquals(person.getAge(), result.getAge(), "Åldern matchar inte förväntat värde");
 
         // Kolla att metodanropet har skett
