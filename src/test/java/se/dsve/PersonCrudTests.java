@@ -17,13 +17,33 @@ public class PersonCrudTests {
         // TODO: Implement setup logic
         // Konfigurera mockobjektet
         personCrud = mock(PersonCrud.class);
+        addTestPersons();
+        // Konfigurera getAllPersons för att returnera testPersons
+        List<Person> testPersons = List.of(
+                new Person("Person1", 20),
+                new Person("Person2", 25),
+                new Person("Person3", 30)
+        );
+        when(personCrud.getAllPersons()).thenReturn(testPersons);
+
+        // Konfigurera getPersonByName för att returnera en testperson
+        Person testPerson = new Person("TestNamn", 10);
+        when(personCrud.getPersonByName(eq("TestNamn"))).thenReturn(testPerson);
+    }
+
+    // Metod för att lägga till testpersoner
+    private void addTestPersons() {
+        doNothing().when(personCrud).addPerson(any(Person.class));
+        personCrud.addPerson(new Person("Person1", 20));
+        personCrud.addPerson(new Person("Person2", 25));
+        personCrud.addPerson(new Person("Person3", 30));
     }
 
     @Test
     public void testAddPerson() {
         // TODO: Implement testAddPerson logic
         // Konfigurera mockens beteende
-        doNothing().when(personCrud).addPerson(any(Person.class));
+       // doNothing().when(personCrud).addPerson(any(Person.class));
 
         //Testa
         personCrud.addPerson(new Person("TestNamn", 10));
@@ -33,10 +53,10 @@ public class PersonCrudTests {
     public void testGetPersonByName() {
         // TODO: Implement testGetPersonByName logic
         //Testperson
-        Person testPerson = new Person("TestNamn", 10);
+       // Person testPerson = new Person("TestNamn", 10);
 
         // Konfigurera mockens beteende
-        when(personCrud.getPersonByName(eq("TestNamn"))).thenReturn(testPerson);
+       // when(personCrud.getPersonByName(eq("TestNamn"))).thenReturn(testPerson);
 
         //Testa
         Person result = personCrud.getPersonByName("TestNamn");
@@ -53,14 +73,14 @@ public class PersonCrudTests {
     public void testGetAllPersons() {
         // TODO: Implement testGetAllPersons logic
         // Skapa några testpersoner
-        List<Person> testPersons = List.of(
+       /* List<Person> testPersons = List.of(
                 new Person("Person1", 20),
                 new Person("Person2", 25),
                 new Person("Person3", 30)
-        );
+        );*/
 
         // Konfigurera mockens beteende
-        when(personCrud.getAllPersons()).thenReturn(testPersons);
+        //when(personCrud.getAllPersons()).thenReturn(testPersons);
 
         //Testa
         List<Person> result = personCrud.getAllPersons();
@@ -69,7 +89,8 @@ public class PersonCrudTests {
         assertNotNull(result);
 
         // Kolla att resultatet innehåller rätt antal personer
-        assertEquals(testPersons.size(), result.size());
+       // assertEquals(testPersons.size(), result.size());
+        assertEquals(3, result.size());
 
         // Kolla att metodanropet har skett
         verify(personCrud).getAllPersons();

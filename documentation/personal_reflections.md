@@ -26,6 +26,7 @@ Då blir det enklare att förstå problemet när man inte tittar på helheten he
 ### Hur planerade du att utveckla och testa den mockade klassen?
 
 Jag planerade att lägga olika testfall i de metoder som redan fanns.
+Först ville jag bara skapa tester som fungerade för att sedan se hur jag kan förbättra dem.
 
 --- Skriv ovanför och ta inte bort denna raden ---
 
@@ -33,6 +34,7 @@ Jag planerade att lägga olika testfall i de metoder som redan fanns.
 
 Det första jag gjorde var att lägga till setUp-logiken för mocking.
 Sedan lade jag till testfall i de metoder som redan fanns.
+Därefter städade jag upp i koden, tex lade jag skapande av testpersoner i en egen metod, först låg det i varje metod.
 
 --- Skriv ovanför och ta inte bort denna raden ---
 
@@ -41,15 +43,18 @@ Sedan lade jag till testfall i de metoder som redan fanns.
 ### Vilka var de största utmaningarna med mockning och enhetstester?
 
 Den största utmaningen är att förstå hur det fungerar i praktiken.
-Jag ar inte riktigt förstått det ännu så jag behöver lära mig mer om det.
+Jag har inte riktigt förstått det ännu så jag behöver lära mig mer om det.
 
 --- Skriv ovanför och ta inte bort denna raden ---
 
 ### Hur löste du problemen med att skapa och använda mockade objekt?
 
-Några exempel: setUp-metoden använde jag mock(PersonCrud.class) för att skapa ett mockobjekt.
-i testAddPerson-metoden använde jag doNothing().
-i testGetPersonByName-metoden använde jag when.
+Några exempel: 
+I setUp-metoden använde jag mock(PersonCrud.class) för att skapa ett mockobjekt.
+Jag lade till en egen metod för att skapa testpersoner.
+i testAddPerson-metoden använde jag doNothing() för att det inte ska göras något när 
+jag anropar annat än det jag vill testa.
+
 
 --- Skriv ovanför och ta inte bort denna raden ---
 
