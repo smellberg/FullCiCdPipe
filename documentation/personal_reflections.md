@@ -54,6 +54,7 @@ I setUp-metoden använde jag mock(PersonCrud.class) för att skapa ett mockobjek
 Jag lade till en egen metod för att skapa testpersoner.
 i testAddPerson-metoden använde jag doNothing() för att det inte ska göras något när 
 jag anropar annat än det jag vill testa.
+Jag provade ven att lägga till texter för att se vad som hände med mina tester, jag lät några vara kvar i koden.
 
 
 --- Skriv ovanför och ta inte bort denna raden ---
@@ -62,10 +63,10 @@ jag anropar annat än det jag vill testa.
 
 ### Reflektera över din inlärning gällande interfaces och mockning i Java.
 
-Jag hängde inte med på lektionerna så bra, det blev lite rörigt så jag tappade tråden.
+Jag hängde inte med på lektionerna så bra pga sjukdom, jag tappade tråden.
 Men sedan har jag kollat på videos i efterhand och även läst på.
 Då fick jag bättre förståelse när jag satt i lugn och ro.
-Men jag känner att jag har en hel del mer att lära för att jag ska förtå hur jag använder det i praktiken.
+Men jag känner att jag har en hel del mer att lära för att jag ska förstå hur jag använder mocking i praktiken.
 
 --- Skriv ovanför och ta inte bort denna raden ---
 

@@ -42,26 +42,15 @@ public class PersonCrudTests {
     @Test
     public void testAddPerson() {
         // TODO: Implement testAddPerson logic
-        // Konfigurera mockens beteende
-       // doNothing().when(personCrud).addPerson(any(Person.class));
-
-        //Testa
         personCrud.addPerson(new Person("TestNamn", 10));
     }
 
     @Test
     public void testGetPersonByName() {
         // TODO: Implement testGetPersonByName logic
-        //Testperson
-       // Person testPerson = new Person("TestNamn", 10);
-
-        // Konfigurera mockens beteende
-       // when(personCrud.getPersonByName(eq("TestNamn"))).thenReturn(testPerson);
-
-        //Testa
         Person result = personCrud.getPersonByName("TestNamn");
 
-        //Kolla att resultatet är sant
+        // Kolla att resultatet är sant
         assertEquals("TestNamn", result.getName());
         assertEquals(10, result.getAge());
 
@@ -72,24 +61,12 @@ public class PersonCrudTests {
     @Test
     public void testGetAllPersons() {
         // TODO: Implement testGetAllPersons logic
-        // Skapa några testpersoner
-       /* List<Person> testPersons = List.of(
-                new Person("Person1", 20),
-                new Person("Person2", 25),
-                new Person("Person3", 30)
-        );*/
-
-        // Konfigurera mockens beteende
-        //when(personCrud.getAllPersons()).thenReturn(testPersons);
-
-        //Testa
         List<Person> result = personCrud.getAllPersons();
 
         //Kolla att resultatet inte är null
         assertNotNull(result);
 
         // Kolla att resultatet innehåller rätt antal personer
-       // assertEquals(testPersons.size(), result.size());
         assertEquals(3, result.size());
 
         // Kolla att metodanropet har skett
@@ -122,12 +99,6 @@ public class PersonCrudTests {
 
         // Lägg till utskrifter för att felsöka
         System.out.println("Resultat efter uppdatering: " + result);
-
-        // Kolla att resultatet inte är null
-        //assertNotNull(result, "Uppdaterad person är null");
-
-        // Kolla att åldern har uppdaterats korrekt
-        //assertEquals(person.getAge(), result.getAge(), "Åldern matchar inte förväntat värde");
 
         // Kolla att metodanropet har skett
         verify(personCrud).updatePerson(eq("TestPerson"), any(Person.class));
